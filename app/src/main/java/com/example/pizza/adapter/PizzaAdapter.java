@@ -1,5 +1,6 @@
 package com.example.pizza.adapter;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -38,6 +39,7 @@ public class PizzaAdapter extends BaseAdapter {
         return i+1;
     }
 
+    @SuppressLint("ViewHolder")
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = inflater.inflate(R.layout.activity_pizza_item, null);
@@ -48,7 +50,11 @@ public class PizzaAdapter extends BaseAdapter {
         ImageView photo = view.findViewById(R.id.pizza_image);
 
         nom.setText(pizzas.get(i).getNom());
-        desc.setText(pizzas.get(i).getDesc());
+        String desctext=pizzas.get(i).getDesc();
+        if(desctext.length()>10){
+            desctext=desctext.substring(0,20)+"..";
+        }
+        desc.setText(desctext);
         duration.setText(pizzas.get(i).gettime());
         photo.setImageResource(pizzas.get(i).getPhoto());
 

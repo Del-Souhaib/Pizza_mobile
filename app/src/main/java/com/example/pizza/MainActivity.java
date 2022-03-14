@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ps.create(new Pizza("BARBECUED CHICKEN PIZZA", "35 min", R.mipmap.pizza1, "desc"));
+        ps.create(new Pizza("BARBECUED CHICKEN PIZZA", "35 min", R.mipmap.pizza1, "descddddddddddddddddddddddddddddddddddddddddddd"));
         ps.create(new Pizza("PIZZA maragrita ", "22 min", R.mipmap.pizza2, "desc"));
         ps.create(new Pizza("CHICKEN PIZZA ", "30 min", R.mipmap.pizza3, "desc"));
         ps.create(new Pizza("Buffer PIZZA ", "20 min", R.mipmap.pizza4, "desc"));
