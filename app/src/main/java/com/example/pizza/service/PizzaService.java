@@ -27,8 +27,12 @@ public class PizzaService implements IDao<Pizza> {
     }
 
     @Override
-    public boolean update(Pizza o) {
-        return false;
+    public boolean update(int id,Pizza o) {
+        Pizza pizza=pizzas.get(id);
+        pizza.setNom(o.getNom());
+        pizza.setDesc(o.getDesc());
+        pizza.settime(o.gettime());
+        return true;
     }
 
     @Override

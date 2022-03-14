@@ -13,17 +13,19 @@ import com.example.pizza.beans.Pizza;
 
 public class pizza extends AppCompatActivity {
     String pizzaid;
-
+    TextView title,desc,duration;
+    ImageView image;
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pizza);
-        Intent intent=this.getIntent();
+        intent=this.getIntent();
         if(intent!=null){
-            TextView title=findViewById(R.id.pizza_title);
-            TextView desc=findViewById(R.id.pizza_desc);
-            TextView duration=findViewById(R.id.pizza_duree);
-            ImageView image=findViewById(R.id.pizza_image);
+             title=findViewById(R.id.pizza_title);
+             desc=findViewById(R.id.pizza_desc);
+             duration=findViewById(R.id.pizza_duree);
+             image=findViewById(R.id.pizza_image);
 
             title.setText(intent.getStringExtra("title"));
             desc.setText(intent.getStringExtra("desc"));
@@ -37,14 +39,28 @@ public class pizza extends AppCompatActivity {
         findViewById(R.id.delete_pizza).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast toast0 = Toast.makeText(getApplicationContext(), "pizza supprimé", Toast.LENGTH_SHORT);
-                toast0.show();
 
-                Intent intent = new Intent(pizza.this, MainActivity.class);
-                intent.putExtra("id",pizzaid);
-                intent.putExtra("type","delete");
+                Intent intent1 = new Intent(pizza.this, MainActivity.class);
+                intent1.putExtra("id",pizzaid);
+                intent1.putExtra("type","delete");
 
                 startActivity(intent);
+
+            }
+        });
+
+
+        findViewById(R.id.update_pizza).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(pizza.this, Updatepizza.class);
+                intent1.putExtra("pizza_id",pizzaid);
+                intent1.putExtra("name",intent.getStringExtra("title"));
+                intent1.putExtra("desc",intent.getStringExtra("desc"));
+                intent1.putExtra("duration",intent.getStringExtra("duration"));
+                intent1.putExtra("image",intent.getIntExtra("image",R.drawable.ic_launcher_background));
+
+                startActivity(intent1);
 
             }
         });

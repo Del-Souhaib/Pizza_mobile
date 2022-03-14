@@ -84,6 +84,12 @@ public class MainActivity extends AppCompatActivity {
                 toast0.show();
 
             }
+            else if (type.equals("update")) {
+                ps.update(Integer.parseInt(getdatafromadd.getStringExtra("pizza_id").toString()),new Pizza(getdatafromadd.getStringExtra("name"), getdatafromadd.getStringExtra("duration"), R.mipmap.pizza1, getdatafromadd.getStringExtra("desc")));
+                Toast toast0 = Toast.makeText(getApplicationContext(), "pizza "+getdatafromadd.getStringExtra("name"), Toast.LENGTH_SHORT);
+                toast0.show();
+
+            }
         }
 
 

@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.pizza.beans.Pizza;
-
 public class Addpizza extends AppCompatActivity {
 
     @Override
@@ -16,12 +14,12 @@ public class Addpizza extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addpizza);
 
-        findViewById(R.id.Addpizza_submit).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.update_pizza_submit).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextView name=findViewById(R.id.add_pizza_name);
-                TextView desc=findViewById(R.id.add_pizza_desc);
-                TextView duration=findViewById(R.id.add_pizza_duration);
+                TextView name=findViewById(R.id.update_pizza_name);
+                TextView desc=findViewById(R.id.update_pizza_desc);
+                TextView duration=findViewById(R.id.update_pizza_duration);
 
                 Intent intent = new Intent(Addpizza.this, MainActivity.class);
                 intent.putExtra("title",name.getText().toString());

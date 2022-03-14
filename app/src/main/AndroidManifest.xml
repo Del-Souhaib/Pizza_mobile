@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pizza">
         <activity
+            android:name=".Updatepizza"
+            android:exported="false" />
+        <activity
             android:name=".Addpizza"
             android:exported="false" />
         <activity

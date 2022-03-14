@@ -18,7 +18,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/add_pizza_duration"
+        android:id="@+id/update_pizza_duration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="38dp"
@@ -26,7 +26,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_pizza_desc" />
+        app:layout_constraintTop_toBottomOf="@+id/update_pizza_desc" />
 
     <TextView
         android:id="@+id/textView3"
@@ -35,12 +35,12 @@
         android:layout_marginStart="16dp"
         android:text="Nom"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/add_pizza_name"
+        app:layout_constraintBottom_toBottomOf="@+id/update_pizza_name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/add_pizza_name" />
+        app:layout_constraintTop_toTopOf="@+id/update_pizza_name" />
 
     <EditText
-        android:id="@+id/add_pizza_name"
+        android:id="@+id/update_pizza_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
@@ -62,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/add_pizza_desc"
+        android:id="@+id/update_pizza_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -71,15 +71,15 @@
         android:gravity="start|top"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_pizza_name" />
+        app:layout_constraintTop_toBottomOf="@+id/update_pizza_name" />
 
     <Button
-        android:id="@+id/Addpizza_submit"
+        android:id="@+id/update_pizza_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
         android:layout_marginTop="71dp"
         android:text="Ajouter"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_pizza_duration" />
+        app:layout_constraintTop_toBottomOf="@+id/update_pizza_duration" />
 </androidx.constraintlayout.widget.ConstraintLayout>
